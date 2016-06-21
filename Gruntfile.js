@@ -27,13 +27,25 @@ module.exports = function(grunt) {
                     "css/main.min.css": "less/main.less"
                 }
             }
-        }
+        },
+        copy: {
+            fonts: {
+                files: [{
+                    expand: true,
+                    cwd: 'font-awesome/fonts',
+                    src: ['*'],
+                    dest: 'fonts/',
+                    filter: 'isFile'
+                }]
+            },
+        },
     });
 
     // Load the plugins.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['uglify', 'less']);
+    grunt.registerTask('default', ['uglify', 'less', 'copy']);
 
 };
