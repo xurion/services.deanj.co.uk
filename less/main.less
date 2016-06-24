@@ -1,3 +1,4 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @import "variables.less";
 @import "mixins.less";
@@ -136,15 +137,12 @@ header {
 
             &:before {
 
-                -moz-transition: all 0.3s;
-                -webkit-transition: all 0.3s;
-
-                background: url('../img/logo-22x22.png') no-repeat;
+                background: url('../img/logo-22x22.png') no-repeat 0 1px;
+                background-size: 21px;
                 content: ' ';
                 display: inline-block;
                 height: 22px;
-                margin-right: 5px;
-                transition: all 0.3s;
+                margin-right: 1px;
                 width: 22px;
             }
 	    }
@@ -152,23 +150,7 @@ header {
 
     .navbar-fixed-top.navbar-shrink {
 
-        padding: 10px 0;
-
-		.navbar-brand {
-
-	        font-size: 1.5em;
-
-            &:before {
-
-                -moz-transition: all 0.3s;
-                -webkit-transition: all 0.3s;
-
-                background-size: 16px 16px;
-                height: 16px;
-                transition: all 0.3s;
-                width: 16px;
-            }
-	    }
+        padding: 0;
 	}
 }
 
