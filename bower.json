@@ -15,11 +15,16 @@
     "tests"
   ],
   "devDependencies": {
-    "font-awesome": "^4.6.3",
     "bootstrap": "^3.3.6",
-    "respond": "respondJS#^1.4.2"
+    "font-awesome": "^4.6.3",
+    "html5shiv": "^3.7.3",
+    "respond": "respondJS#^1.4.2",
+    "jquery": "^3.0.0",
+    "jquery-easing-original": "^1.3.2",
+    "jqBootstrapValidation": "^1.3.7",
+    "classie": "^1.0.1"
   },
-  "dependencies": {
-    "html5shiv": "^3.7.3"
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
   }
 }

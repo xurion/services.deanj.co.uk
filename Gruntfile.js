@@ -4,8 +4,18 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             main: {
-                src: 'js/main.js',
-                dest: 'js/main.min.js'
+                files: {
+                    'js/compiled/main.min.js': [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/bootstrap/dist/js/bootstrap.js',
+                        'bower_components/jquery-easing-original/jquery.easing.js',
+                        'bower_components/jqBootstrapValidation/src/jqBootstrapValidation.js',
+                        'bower_components/classie/classie.js',
+                        'js/src/cbpAnimatedHeader.js',
+                        'js/src/contact.js',
+                        'js/src/main.js'
+                    ]
+                }
             }
         },
         less: {
