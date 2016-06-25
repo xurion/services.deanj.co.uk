@@ -9426,12 +9426,6 @@ section.success a.active {
   opacity: 1;
   top: 5px;
 }
-.floating-label-form-group-with-focus label {
-  color: #18bc9c;
-}
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
-}
 footer {
   color: white;
 }
