@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                         'bower_components/jquery-easing-original/jquery.easing.js',
                         'bower_components/jqBootstrapValidation/src/jqBootstrapValidation.js',
                         'bower_components/classie/classie.js',
-                        'js/src/cbpAnimatedHeader.js',
+                        'js/third-party/cbpAnimatedHeader.js',
                         'js/src/contact.js',
                         'js/src/main.js'
                     ]
@@ -19,15 +19,7 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            expanded: {
-                options: {
-                    paths: ["css"]
-                },
-                files: {
-                    "css/main.css": "less/main.less"
-                }
-            },
-            minified: {
+            main: {
                 options: {
                     paths: ["css"],
                     cleancss: true
@@ -60,13 +52,25 @@ module.exports = function(grunt) {
                     flatten: true
                 }]
             }
-        }
+        },
+        lesshint: {
+
+            options: {
+
+                lesshintrc: true
+            },
+            main: {
+
+                src: 'less/**/*.less'
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-lesshint');
 
-    grunt.registerTask('default', ['uglify', 'less', 'copy']);
+    grunt.registerTask('default', ['lesshint', 'uglify', 'less', 'copy']);
 
 };

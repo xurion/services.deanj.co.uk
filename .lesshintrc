@@ -1,0 +1,28 @@
+{
+  "attributeQuotes": {
+    "enabled": true
+  },
+  "borderZero": {
+    "enabled": true
+  },
+  "decimalZero": {
+    "enabled": true
+  },
+  "hexLength": {
+    "enabled": true,
+    "style": "short"
+  },
+  "idSelector": {
+    "enabled": true
+  },
+  "qualifyingElement": {
+    "enabled": false
+  },
+  "urlQuotes": {
+    "enabled": true
+  },
+  "zeroUnit": {
+    "enabled": true,
+    "style": "no_unit"
+  }
+}

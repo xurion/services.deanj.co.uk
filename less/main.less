@@ -1,7 +1,7 @@
-@import "../bower_components/bootstrap/less/bootstrap.less";
-@import "../bower_components/font-awesome/less/font-awesome.less";
-@import "variables.less";
-@import "mixins.less";
+@import '../bower_components/bootstrap/less/bootstrap';
+@import '../bower_components/font-awesome/less/font-awesome';
+@import 'variables';
+@import 'mixins';
 
 body {
 
@@ -36,14 +36,14 @@ h4,
 h5,
 h6 {
 
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 hr.star-rule {
 
-    border: none;
+    border: 0;
     border-color: @brand-primary;
     border-top: solid 5px;
     margin: 25px auto 30px;
@@ -55,7 +55,7 @@ hr.star-rule {
 
         background-color: white;
         color: @brand-primary;
-        content: "\f005";
+        content: '\f005';
         display: inline-block;
         font-family: FontAwesome;
         font-size: 2em;
@@ -99,10 +99,10 @@ header {
 		.name {
 
 			display: block;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 2em;
-            text-transform: uppercase;
             font-weight: 700;
+            text-transform: uppercase;
 		}
 
 		.skills {
@@ -177,9 +177,9 @@ header {
 
 .navbar {
 
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 
 	a:focus {
 
@@ -203,7 +203,7 @@ header {
 .navbar-default,
 .navbar-inverse {
 
-	border: none;
+	border: 0;
 }
 
 section {
@@ -256,9 +256,9 @@ section.success {
     textarea {
 
         background: none;
-        border: none;
+        border: 0;
         border-radius: 0;
-        box-shadow: none !important;
+        box-shadow: none;
         font-size: 1.5em;
         opacity: 0.6;
         padding-left: 0;
@@ -282,7 +282,6 @@ section.success {
         position: relative;
         top: 2em;
         transition: top 0.3s ease,opacity 0.3s ease;
-        vertical-align: middle;
         vertical-align: baseline;
         z-index: 0;
     }
