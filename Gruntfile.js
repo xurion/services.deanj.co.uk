@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -62,15 +62,37 @@ module.exports = function(grunt) {
             main: {
 
                 src: 'less/**/*.less'
-            },
+            }
         },
+        jshint: {
+
+            all: [
+                'Gruntfile.js',
+                'js/src/**/*.js'
+            ]
+        },
+        jscs: {
+
+            main: {
+
+                files: {
+
+                    src: [
+                        'Gruntfile.js',
+                        'js/src/**/*.js'
+                    ]
+                }
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-lesshint');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-jscs');
 
-    grunt.registerTask('default', ['lesshint', 'uglify', 'less', 'copy']);
+    grunt.registerTask('default', ['jscs', 'lesshint', 'uglify', 'less', 'copy']);
 
 };
