@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                     cleancss: true
                 },
                 files: {
-                    "css/main.min.css": "less/main.less"
+                    "css/main.css": "less/main.less"
                 }
             }
         },
@@ -66,6 +66,10 @@ module.exports = function (grunt) {
         },
         jshint: {
 
+            options: {
+
+                reporter: require('jshint-stylish')
+            },
             all: [
                 'Gruntfile.js',
                 'js/src/**/*.js'
